@@ -1,7 +1,7 @@
 part of 'city_bloc.dart';
 
 class CityState extends Equatable {
-  final String initialCityState;
+  static late final String initialCityState;
   const CityState({
     this.initialCityState = 'Toulouse',
   });
@@ -15,5 +15,11 @@ class CityInitialState extends CityState {
 }
 
 class ChangeCityState extends CityState {
-  const ChangeCityState();
+  final String? changeCity;
+  @override
+  // TODO: implement initialCityState
+  // String get initialCityState => super.initialCityState;
+  ChangeCityState({required this.changeCity}) {
+    CityState.initialCityState = changeCity!;
+  }
 }
