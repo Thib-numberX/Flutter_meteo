@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 
-import '../mock/city_data.dart';
 
 part 'city_event.dart';
 part 'city_state.dart';
