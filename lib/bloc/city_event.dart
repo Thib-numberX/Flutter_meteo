@@ -9,5 +9,5 @@ class LoadCityEvent extends CityEvent {
 }
 
 class ChangeCityEvent extends CityEvent {
-  const ChangeCityEvent();
+  ChangeCityEvent(newValue);
 }

@@ -32,8 +32,8 @@ class HomePage extends StatelessWidget {
                           child: Text(city),
                         );
                       }).toList(),
-                      onChanged: (Object) =>
-                          CityBloc()..add(const ChangeCityEvent()),
+                      onChanged: (String? value) =>
+                          CityBloc()..add(ChangeCityEvent(value)),
                     ),
                   ),
                   const Spacer(flex: 1),

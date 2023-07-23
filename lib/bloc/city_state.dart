@@ -13,3 +13,7 @@ class CityState extends Equatable {
 class CityInitialState extends CityState {
   const CityInitialState();
 }
+
+class ChangeCityState extends CityState {
+  const ChangeCityState();
+}
