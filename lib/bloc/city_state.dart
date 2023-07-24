@@ -1,25 +1,33 @@
 part of 'city_bloc.dart';
 
 class CityState extends Equatable {
-  static late final String initialCityState;
+  final String valueCityState;
   const CityState({
-    this.initialCityState = 'Toulouse',
+    required this.valueCityState,
   });
 
   @override
-  List<Object> get props => [initialCityState];
+  List<Object> get props => [valueCityState];
+
+  static CityState updateCityValue({required dynamic value}) {
+    print(value);
+    return CityState(valueCityState: value);
+  }
 }
 
-class CityInitialState extends CityState {
-  const CityInitialState();
-}
+// class CityInitialState extends CityState {
+//   const CityInitialState();
+// }
 
 class ChangeCityState extends CityState {
-  final String? changeCity;
+  const ChangeCityState({required super.valueCityState});
+
+  // final String? changeCity;
+
   @override
-  // TODO: implement initialCityState
-  // String get initialCityState => super.initialCityState;
-  ChangeCityState({required this.changeCity}) {
-    CityState.initialCityState = changeCity!;
-  }
+  List<Object> get props => [valueCityState];
+
+  // ChangeCityState({required this.changeCity}) : super(valueCityState: '') {
+  //   print(changeCity);
+  // }
 }

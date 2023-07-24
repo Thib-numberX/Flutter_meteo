@@ -9,5 +9,6 @@ class LoadCityEvent extends CityEvent {
 }
 
 class ChangeCityEvent extends CityEvent {
-  ChangeCityEvent(newValue);
+  final String? newValueCity;
+  ChangeCityEvent({required this.newValueCity});
 }

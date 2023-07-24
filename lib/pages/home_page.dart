@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                   BlocBuilder<CityBloc, CityState>(
                     builder: (BuildContext context, CityState state) =>
                         DropdownButton(
-                      value: state.initialCityState,
+                      value: state.valueCityState,
                       items: cities.map((city) {
                         print(city);
                         return DropdownMenuItem(
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                         );
                       }).toList(),
                       onChanged: (String? value) =>
-                          CityBloc()..add(ChangeCityEvent(value)),
+                          CityBloc()..add(ChangeCityEvent(newValueCity: value)),
                     ),
                   ),
                   const Spacer(flex: 1),
