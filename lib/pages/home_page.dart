@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meteo/bloc/city_bloc.dart';
+import 'package:meteo/bloc/city_bloc/city_bloc.dart';
 import '../mock/city_data.dart';
 import '../components/weather_card.dart';
 
