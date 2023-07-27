@@ -15,19 +15,10 @@ class CityState extends Equatable {
   }
 }
 
-// class CityInitialState extends CityState {
-//   const CityInitialState();
-// }
-
 class ChangeCityState extends CityState {
   const ChangeCityState({required super.valueCityState});
 
-  // final String? changeCity;
-
+  // permet à bloc de comparer la valeur
   @override
   List<Object> get props => [valueCityState];
-
-  // ChangeCityState({required this.changeCity}) : super(valueCityState: '') {
-  //   print(changeCity);
-  // }
 }

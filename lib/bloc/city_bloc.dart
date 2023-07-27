@@ -15,7 +15,7 @@ void _onLoadCity(LoadCityEvent event, Emitter<CityState> emit) {
   print('evenement : $event');
 }
 
+// bloc fait le lien avec l'event dans city_event. Ici nous n'avons besoin que d'émettre un state avec la nouvelle valeur.
 void _onCityEvent(ChangeCityEvent event, Emitter<CityState> emit) {
-  // ChangeCityState(changeCity: event.newValueCity);
   emit(CityState.updateCityValue(value: event.newValueCity!));
 }
